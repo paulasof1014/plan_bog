@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link rel="icon" type="imagen/png" href="img/Recurso 1.png">
+<title>contacto</title>
+<link href="css/hoja3.css" rel="stylesheet" type="text/css">
+</head>
+	<body>
+		<div id="flex_mama">
+  <header>
+    <div id="logo"><img src="img/Recurso 1.png" width="75px" height="60px" alt="Plan BOG"></div>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="categorias.html">Categorias</a></li>
+        <li><a href="contacto.html">Contactanos</a></li>
+      </ul>
+    </nav>
+  </header>
+	
+
+  <!-- Hero -->
+  <section class="bloque hero-contacto">
+    <div class="contenedor">
+      <h1>Contáctanos</h1>
+      <p>Hablemos para activar experiencias y planes únicos en Bogotá.</p>
+    </div>
+  </section>
+
+<div class="equipo_grid">
+    <input type="checkbox" id="paula">
+    <label for="paula"><img src="img/1.png" alt="paula"></label>
+
+    <input type="checkbox" id="ivan">
+    <label for="ivan"><img src="img/2.png" alt="ivan"></label>
+
+    <input type="checkbox" id="catalina">
+    <label for="catalina"><img src="img/3.png" alt="catalina"></label>
+
+    <input type="checkbox" id="daniela">
+    <label for="daniela"><img src="img/4.png" alt="daniela"></label>
+	
+  </div>
+
+  <!-- Form + Newsletter -->
+  <section class="bloque">
+    <div class="contenedor grid-2">
+      <!-- Formulario -->
+      <form id="form-contacto" class="caja form">
+        <div class="fila-2">
+          <input type="text" name="nombre" placeholder="Nombre" required />
+          <input type="tel" name="telefono" placeholder="Teléfono" />
+        </div>
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="text" name="asunto" placeholder="Asunto" />
+        <textarea name="mensaje" rows="6" placeholder="Mensaje" required></textarea>
+        <button class="btn" type="submit">Enviar mensaje</button>
+        <p id="form-msg" class="form-msg" role="status" aria-live="polite"></p>
+      </form>
+
+      <!-- Newsletter -->
+      <aside class="caja newsletter">
+        <h3>Nuestro boletín</h3>
+        <p>Recibe cada semana planes de música, gastronomía, deporte y más.</p>
+        <form id="form-news" class="news__form" action="#">
+          <input type="email" name="email" placeholder="Tu correo" required />
+          <button class="btn btn--oscuro" type="submit">Suscribirme</button>
+        </form>
+        <p id="news-msg" class="form-msg" role="status" aria-live="polite"></p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Tarjetas de contacto -->
+  <section class="bloque">
+    <div class="contenedor info3">
+      <article class="caja info">
+        <div class="info__icon">📞</div>
+        <h4>Teléfono</h4>
+        <p>+57 (601) 765 6685</p>
+        <small>Lun–Vie: 9:00 a.m. – 6:00 p.m.</small>
+      </article>
+
+      <article class="caja info">
+        <div class="info__icon">✉️</div>
+        <h4>Correo</h4>
+        <p>contacto@planbog.co</p>
+        <small>Respondemos en menos de 24 h</small>
+      </article>
+
+      <article class="caja info">
+        <div class="info__icon">📍</div>
+        <h4>Dirección</h4>
+        <p>Cra. 13 #51-16, Chapinero, Bogotá</p>
+        <small>Atención con cita previa</small>
+      </article>
+    </div>
+  </section>
+
+  <!-- Mapa -->
+  <section class="bloque">
+    <div class="contenedor">
+      <div class="caja mapa">
+        <iframe
+          title="Ubicación Plan BOG"
+          src="https://www.google.com/maps?q=Chapinero,+Bogotá&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Plan BOG — Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
