@@ -1,0 +1,362 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html { 
+	font-size: 14px; 
+}
+
+body {
+  margin: 0;
+  display: flex;           
+  justify-content: center;
+  background: #f6f6f6;
+  color: rgba(8,52,62,1);
+  font-family: "Poppins", "Roboto", Arial, sans-serif;
+  word-wrap: break-word;
+
+}
+
+#flex_mama{
+  width: 90vw;
+  height: auto;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;       
+}
+
+header{
+    width: 90vw;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(
+  to bottom,
+  rgba(240,155,37,1) 0%,
+  rgba(240,155,37,1) 0%,
+  rgba(240,155,37,0) 120%
+);
+ padding: 0 12px;
+    position: fixed;
+	z-index: 10;
+ }
+
+nav ul{
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: background .2s, color .2s;
+}
+nav ul li a:hover{
+  color: rgba(8,52,62,1);
+  background: rgba(255,255,255,.08);
+}
+
+/* Utilidades */
+.contenedor { 
+	width: min(1100px, 92%); 
+	margin: 53px auto;
+	padding: 6em 2em;
+	position: relative;
+}
+
+.bloque {
+	padding:0;
+}
+.bloque--mini {
+	padding: 28px 0;
+}
+.caja {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(8,52,62,.06);
+}
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: linear-gradient(
+  to bottom,
+  rgba(240,155,37,1) 0%,
+  rgba(240,155,37,1) 0%,
+  rgba(240,155,37,0) 120%
+);
+       /* acento Plan BOG */
+  color: #08343E;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+	color: white;
+}
+.btn:hover { 
+	filter: brightness(.95); 
+}
+.btn--oscuro { 
+	background: #08343E; 
+	color: #fff; 
+}
+
+
+/* Header */
+.header { 
+	background: #ffffff; 
+	position: sticky;
+	top: 0;
+	z-index: 10; 
+}
+.header__wrap {
+  display: grid;
+  grid-template-columns: 160px 1fr 260px;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+}
+.logo {
+	font-weight: 800;
+	font-size: 1.4rem; 
+	color: #08343E; 
+	text-decoration: none; 
+}
+.logo span { 
+	color: #F09B25; 
+}
+.nav a {
+  color: #08343E; 
+	text-decoration: none;
+	margin: 0 10px; 
+	font-weight: 500;
+}
+.nav a.activo { 
+	text-decoration: underline;
+}
+
+/* Hero */
+.hero-contacto {
+   background: linear-gradient(
+  to bottom,
+  rgba(240,155,37,1) 0%,
+  rgba(240,155,37,1) 0%,
+  rgba(240,155,37,0) 120%
+);
+
+  text-align: center;
+}
+.hero-contacto h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 0 0 8px;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgba(252,249,249,1.00);	
+	font-family: "Figtree", sans-serif;
+}
+.hero-contacto p 
+{ 
+margin: 0;
+opacity: .85; 
+	    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    font-weight: 400;
+	color: white;
+}
+
+.p:hover {
+    color: rgba(8, 52, 62, 1);
+    transition: all 0.2s 
+ease;
+}
+
+/* Marcas */
+.marcas { 
+	display: grid;
+	grid-template-columns: repeat(4,1fr); 
+	gap: 16px; 
+	align-items: center;
+}
+.marcas img { 
+	width: 100%; 
+	max-height: 36px; 
+	object-fit: contain; 
+	filter: grayscale(1); opacity: .6; }
+
+/* Grid form + newsletter */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1.4fr .9fr;
+  gap: 24px;
+}
+.form input, .form textarea,
+.news__form input {
+  width: 100%;
+  border: 1px solid rgba(8,52,62,.18);
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  background: #f9fbfb;
+  outline: none;
+}
+.form .fila-2 {
+	display: grid; 
+	grid-template-columns: 1fr 1fr; 
+	gap: 12px;
+}
+.form textarea { 
+	resize: vertical;
+}
+.form-msg { 
+	margin-top: 8px; 
+	font-size: .9rem; 
+	color: #2f6f3e; 
+	min-height: 1em; }
+
+.newsletter {
+ background: linear-gradient(
+  to bottom,
+  rgba(240,155,37,1) 0%,
+  rgba(240,155,37,1) 0%,
+  rgba(240,155,37,0) 120%
+);
+
+  backdrop-filter: blur(3px);
+}
+.newsletter h3 { 
+	margin-top: 4px; 
+	color: white;
+}
+.news__form { 
+	display: grid; 
+	grid-template-columns: 1fr auto; 
+	gap: 10px;
+}
+
+/* Info cards */
+.info3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.info { 
+	text-align: left;
+}
+.info__icon { 
+	font-size: 28px; 
+	margin-bottom: 8px; 
+}
+
+/* Mapa */
+.mapa { 
+	padding: 0; 
+	overflow: hidden; 
+}
+
+.mapa iframe {
+  display: block;
+  width: 100%;
+  height: 360px;
+  border: 0;
+  border-radius: 16px;
+}
+#nuestro_equipo {
+  text-align: center;
+  padding: 60px 40px; /* un poco menos de padding superior */
+  position: relative;
+  overflow: visible;
+}
+
+#nuestro_equipo h2 {
+  font-family: "Kids Magic", sans-serif;
+  font-size: 3rem;
+  color: var(--rosado-neon);
+  margin-bottom: 20px; /* antes 60px, ahora mucho más cerca de las imágenes */
+  letter-spacing: 1.5px;
+}
+
+/* Contenedor horizontal */
+.equipo_grid {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px; /* un poco más de espacio entre imágenes */
+  overflow-x: auto;
+  overflow-y: visible;
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  width: auto;
+	margin: 53px;
+}
+
+/* Scroll estético */
+.equipo_grid::-webkit-scrollbar {
+  height: 8px;
+}
+.equipo_grid::-webkit-scrollbar-thumb {
+  background: var(--rosado-neon);
+  border-radius: 4px;
+}
+
+/* Estilo base de las imágenes */
+.equipo_grid label img {
+  flex: 0 0 auto;
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 48px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 1;
+}
+
+/* Fondo oscuro cuando hay una imagen activa */
+.equipo_grid input:checked + label::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  z-index: 90;
+}
+
+/* Imagen ampliada cuando se hace clic */
+.equipo_grid input:checked + label img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: auto;
+  height: auto;
+  max-width: 70vw;
+  max-height: 70vh;
+  z-index: 100;
+  transition: all 0.2s ease;
+}
+
+/* Footer */
+
+
+
+footer{
+ background:#F09B25;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+ }
+
+

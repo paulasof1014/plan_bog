@@ -1,0 +1,361 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+ display: flex;           
+  justify-content: center;
+  background: #f6f6f6;
+  color: rgba(8,52,62,1);
+  font-family: "Poppins", "Roboto", Arial, sans-serif;
+  word-wrap: break-word;
+}
+
+#flex_mama{
+  width: 90vw;
+  height: auto;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;       
+}
+
+/* HEADER */
+header{
+    width: 90vw;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   background: linear-gradient(
+  to bottom,
+  rgba(156,39,35,1) 0%,
+  rgba(156,39,35,1) 0%,
+  rgba(156,39,35,0) 120%
+);
+    padding: 0 12px;
+    position: fixed;
+	z-index: 10;
+}
+
+#logo{
+  text-align: center;
+  padding: 10px 14px;
+}
+
+header span { 
+	color: #f09b25; 
+}
+nav a {
+  margin-left: 2em;
+  color: #fff;
+  text-decoration: none;
+  transition: color .3s;
+}
+nav a:hover { color: #f09b25; }
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 6em 2em;
+  background: url('img/bg-bogota.jpg') center/cover no-repeat;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+  to bottom,
+  rgba(156,39,35,1) 0%,
+  rgba(156,39,35,1) 0%,
+  rgba(156,39,35,0) 120%
+);
+	
+}
+.hero h1, .hero p, .hero .filtros {
+  position: relative;
+  z-index: 2;
+font-family: "Figtree", sans-serif;
+}
+.hero h1 { 
+	font-size: 4rem; 
+	margin-bottom: 0.5em;
+  font-weight: 700;
+margin: 53px;
+	color: white;
+}
+.hero p { 
+	color: white;
+	margin-bottom: 2em; 
+	
+}
+
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+.pill {
+  border: 1px solid #9C2723;
+  background: transparent;
+  padding: 0.6em 1.2em;
+  border-radius: 25px;
+  cursor: pointer;
+  color: #fff;
+  transition: all .3s;
+}
+.pill:hover, .pill.activo {
+  background:#9C2723;
+  color: white;
+}
+
+/* BLOQUES */
+.bloque {
+  padding: 4em 2em;
+  text-align: center;
+}
+.bloque h2 {
+  margin-bottom: 2em;
+  color: #f09b25;
+  font-size: 1.8em;
+}
+
+/* GRID TARJETAS */
+.grid-categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2em;
+}
+.caja {
+  background: rgba(255,255,255,0.05);
+  border-radius: 1em;
+  overflow: hidden;
+  transition: transform .3s;
+}
+.caja:hover { transform: translateY(-8px); }
+.caja img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.info {
+  padding: 1.5em;
+  text-align: left;
+}
+.badge {
+  display: inline-block;
+  padding: 0.3em 0.7em;
+  border-radius: 6px;
+  font-size: 0.8em;
+  color: #fff;
+}
+.musica { background: #ff3d3d; }
+.gastro { background: #ff9b25; }
+.deporte { background: #25a6f0; }
+
+.btn {
+  display: inline-block;
+  margin-top: 1em;
+  background: #f09b25;
+  color: #08343e;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  text-decoration: none;
+  transition: background .3s;
+}
+.btn:hover { background: #ffc260; }
+
+/* TESTIMONIOS */
+.testimonios-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+.testimonio {
+  max-width: 320px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  padding: 1.5em;
+}
+
+.banner2{
+  margin-top: 20px;
+}
+
+.banner2 img{
+   width: 100%;      
+  height: 600px;        
+  object-fit: cover;    
+ display: block;
+
+}
+
+.carrusel {
+  width: 100%;
+  max-width: 1100px;
+  position: relative;
+  margin: 36px auto 72px;
+}
+
+.carrusel__titulo {
+  text-align: center;
+  margin-bottom: 18px;
+  font-weight: 800;
+  font-size: 28px;
+	color: #9C2723
+}
+
+/* ======== VIEWPORT ======== */
+.carrusel__viewport {
+  overflow: hidden;
+  border-radius: 28px;
+  position: relative;
+  background: transparent;
+}
+
+/* ======== PISTA (TRACK) ======== */
+.carrusel__track {
+  display: flex;
+  gap: 28px;
+  padding: 6px 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.carrusel__track::-webkit-scrollbar { display: none; }
+
+/* ======== TARJETAS ======== */
+.card {
+  position: relative;
+  flex: 0 0 260px;
+  width: 260px;
+  height: 350px;
+  border-radius: 28px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  background-color: #E9DCA9;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+.card:hover { transform: scale(1.04); }
+
+/* Imagen de fondo */
+.card__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform .35s ease, filter .35s ease;
+}
+
+/* Degradado superior/inferior */
+.card__shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.55) 0%, rgba(0,0,0,.15) 55%, rgba(0,0,0,0) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Texto */
+.card__info {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2;
+  color: #fff;
+  text-align: left;
+  text-shadow: 0 2px 6px rgba(0,0,0,.35);
+}
+
+.card__info h3 {
+  font-size: 18px;
+  line-height: 1.15;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.card__info p {
+  font-size: 14px;
+  line-height: 1.35;
+  opacity: .95;
+}
+
+/* Botón superior derecho */
+.card__link {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.92);
+  color: #08343E;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  z-index: 3;
+  box-shadow: 0 6px 16px rgba(0,0,0,.18);
+  transition: transform .2s ease, background .2s ease, color .2s ease;
+}
+.card__link:hover {
+  transform: translateY(-1px) scale(1.05);
+  background: #fff;
+}
+
+/* Efecto hover */
+.card:hover .card__bg {
+  transform: scale(1.08);
+  filter: saturate(1.05);
+}
+
+/* ======== FLECHAS ======== */
+.carrusel__controles {
+  position: static;           /* antes: absolute */
+  display: flex;
+  justify-content: flex-end;  /* derecha (usa center o space-between si prefieres) */
+  gap: 12px;
+  margin-top: 14px;           /* separa del carrusel */
+  padding: 0 16px;            /* alinea con el padding del track */
+}
+
+.ctrl {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background:#9C2723;
+  color: #ffffff;
+  border: none;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.12s ease, opacity 0.2s ease;
+}
+
+.ctrl:active { transform: scale(0.96); }
+.ctrl[disabled] { opacity: 0.35; cursor: default; }
+
+
+
+footer{
+  background: #9C2723;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+ 
+}
